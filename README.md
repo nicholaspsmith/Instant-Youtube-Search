@@ -3,8 +3,8 @@
 ###Getting Started###
 
 ```
-  > git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-  > cd ReduxSimpleStarter
+  > git clone git@github.com:nicholaspsmith/Instant-Youtube-Search.git
+  > cd Instant-Youtube-Search
   > npm install
   > npm start
 ```
