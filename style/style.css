@@ -18,10 +18,38 @@
   border-radius: 4px;
 }
 
-.list-group-item {
+.video-list {
+  padding: 0;
+}
+
+.video-list .list-group-item {
   cursor: pointer;
+  display: inline-block;
+  height: 200px;
+  border: none;
+  text-align: center;
 }
 
 .list-group-item:hover {
   background-color: #eee;
+}
+
+.media-object {
+  height: 120px;
+  margin: 0 auto;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+  margin-top: 10px;
+  height: 40px;
+  word-wrap: break-word;
+  font-size: 13px;
+  color: rgb(22, 122, 198);
+  font-weight: 500;
+  font-family: Roboto, arial;
+}
+
+.list-group-item:hover .media-bottom {
+  text-decoration: underline;
 }

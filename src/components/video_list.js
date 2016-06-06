@@ -7,7 +7,7 @@ class VideoList extends Component {
       return <VideoSingle video={video} key={video.etag} />
     })
     return (
-      <ul>
+      <ul className="video-list">
         {videos}
       </ul>
     )

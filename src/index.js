@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
 // import VideoDetail from './components/video_detail'
 import VideoList from './components/video_list'
-import YTSearch from 'youtube-api-search'
+import SimpleYT from 'simple-youtube'
 import config from '../config'
 
 class App extends Component {
@@ -20,7 +20,11 @@ class App extends Component {
   }
 
   searchYoutube(term) {
-    YTSearch({key: config.youtube, term}, (videos) => {
+    SimpleYT({
+      key: config.youtube,
+      number: 12,
+      term
+    }, (videos) => {
       this.setState({videos})
     })
   }
