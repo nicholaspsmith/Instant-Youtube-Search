@@ -10,11 +10,17 @@ class App extends Component {
   constructor(props) {
     super(props)
 
+    // Set initial state
     this.state = {
       videos: []
     }
 
-    YTSearch({key: config.youtube, term: 'api keys javascript'}, (videos) => {
+    // Fetch some videos upon load
+    this.searchYoutube('api keys javascript')
+  }
+
+  searchYoutube(term) {
+    YTSearch({key: config.youtube, term}, (videos) => {
       this.setState({videos})
     })
   }
@@ -22,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <SearchBar />
+        <SearchBar searchYoutube={(term) => this.searchYoutube(term)}/>
         <VideoList videos={this.state.videos} />
       </div>
     )
