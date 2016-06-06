@@ -15,9 +15,7 @@ class App extends Component {
     }
 
     YTSearch({key: config.youtube, term: 'api keys javascript'}, (videos) => {
-      this.setState({
-        videos
-      })
+      this.setState({videos})
     })
   }
 
@@ -25,7 +23,7 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar />
-        <VideoList />
+        <VideoList videos={this.state.videos} />
       </div>
     )
   }

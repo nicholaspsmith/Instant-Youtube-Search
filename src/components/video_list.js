@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 
 class VideoList extends Component {
   render() {
-    const videos = this.props.state.videos.map(function(video){
-      return <li>video</li>
+    const videos = this.props.videos.map(function(video){
+      console.log(video)
+      return <li key={video.etag}>{video.snippet.title}</li>
     })
     return (
       <ul>
