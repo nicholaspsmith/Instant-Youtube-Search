@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
-// import VideoDetail from './components/video_detail'
+import VideoDetail from './components/video_detail'
 import VideoList from './components/video_list'
 import SimpleYT from 'simple-youtube'
 import config from '../config'
@@ -12,7 +12,8 @@ class App extends Component {
 
     // Set initial state
     this.state = {
-      videos: []
+      videos: [],
+      currentVideo: null
     }
 
     // Fetch some videos upon load
@@ -25,18 +26,26 @@ class App extends Component {
       number: 12,
       term
     }, (videos) => {
-      this.setState({videos})
+      this.setState({
+        videos,
+        currentVideo: videos[0]
+      })
     })
   }
 
   render() {
     return (
-      <div className="container">
+      <div>
         <SearchBar searchYoutube={(term) => this.searchYoutube(term)}/>
-        <VideoList videos={this.state.videos} />
+        <VideoDetail video={this.state.currentVideo} />
+        <div className="container">
+          <VideoList 
+            onVideoSelect={currentVideo => this.setState({currentVideo})}
+            videos={this.state.videos} />
+        </div>
       </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<App />, document.querySelector('.entry'));

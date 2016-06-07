@@ -11,11 +11,22 @@
   max-width: 64px;
 }
 
+.video-detail {
+  background: black;
+  padding: 50px 0;
+}
+
 .video-detail .details {
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.video-detail iframe {
+  border: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .video-list {
