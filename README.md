@@ -1,4 +1,4 @@
-# ![alt tag](https://raw.githubusercontent.com/nicholaspsmith/Instant-Youtube-Search/master/public/ytRocketSm.png) Instant Youtube Search
+# ![alt tag](https://raw.githubusercontent.com/nicholaspsmith/Instant-Youtube-Search/master/public/ytRocketSm.png) &nbsp;Instant Youtube Search
 
 ###Getting Started###
 
