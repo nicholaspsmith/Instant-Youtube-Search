@@ -5,6 +5,7 @@ import VideoDetail from './components/video_detail'
 import VideoList from './components/video_list'
 import SimpleYT from 'simple-youtube'
 import config from '../config'
+import _ from 'lodash'
 
 class App extends Component {
   constructor(props) {
@@ -34,9 +35,11 @@ class App extends Component {
   }
 
   render() {
+    const searchYT = _.debounce((term) => this.searchYoutube(term),200)
+
     return (
       <div>
-        <SearchBar searchYoutube={(term) => this.searchYoutube(term)}/>
+        <SearchBar searchYoutube={searchYT}/>
         <VideoDetail video={this.state.currentVideo} />
         <div className="container">
           <VideoList 
