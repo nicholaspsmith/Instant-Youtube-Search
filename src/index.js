@@ -39,7 +39,12 @@ class App extends Component {
 
     return (
       <div>
-        <SearchBar searchYoutube={searchYT}/>
+        <div className="col-sm-1">
+          <img className="rocket" src="../public/ytRocketSm.png" alt="Youtube Rocket"/>
+        </div>
+        <div className="col-sm-10">
+          <SearchBar searchYoutube={searchYT}/>
+        </div>
         <VideoDetail video={this.state.currentVideo} />
         <div className="container">
           <VideoList 

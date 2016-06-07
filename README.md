@@ -1,4 +1,4 @@
-# Instant Youtube Search
+# ![alt tag](https://raw.githubusercontent.com/nicholaspsmith/Instant-Youtube-Search/master/public/ytRocketSm.png) Instant Youtube Search
 
 ###Getting Started###
 
@@ -11,7 +11,7 @@
 
 ###What it does###
 
-Allows you to instantly search youtube for the 5 most relevant videos without needing to hit the "search" button.
+Allows you to instantly search youtube for the most relevant videos without needing to hit the "search" button.
 
 ###Tech Used###
 * React

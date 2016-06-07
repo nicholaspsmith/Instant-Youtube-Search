@@ -1,10 +1,11 @@
+.search-bar-div {
+  margin: 20px;
+}
+
 .search-bar {
   margin: 20px;
   text-align: center;
-}
-
-.search-bar input {
-  width: 75%;
+  width: 100%;
 }
 
 .video-item img {
@@ -63,4 +64,10 @@
 
 .list-group-item:hover .media-bottom {
   text-decoration: underline;
+}
+
+.rocket {
+  display: inline-block;
+  float: left;
+  margin: 22px;
 }
